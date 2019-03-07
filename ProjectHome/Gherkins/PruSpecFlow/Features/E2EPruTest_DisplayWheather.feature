@@ -35,12 +35,23 @@ Scenario: Validate an existing user is able to sign in
 
 
 
-@prutestPageContentValidation
+@problem1
 Scenario: Validate Home Page contain 
-	Given When site url is visited
-	And I have entered city name as Mumbai in your city name text field
-	When I click search 
-	Then The application display list of results with Mumbai as only one result
+	Given url is up an running
+	When I reach website
+	Then The home page is displayed 
+		And <PageMenu> appears 
+
+	| PageMenu |
+	| Wheather |
+	| Maps     |
+	| Guide    |
+	| API      |
+	| Price    |
+	| Partners |
+	| Stations |
+	| Widgets  |
+	| Blog     |
 
 
 
